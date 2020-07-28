@@ -5,14 +5,14 @@
 const Employee = require("./Employee.js");
 // Class to create a template for employees
 // extends adds to employee
-class Engineer extends Employee {
-  // Name, ID, email
+class Intern extends Employee {
+  // Name, ID, email order matters name, id, email, school
   constructor(name, id, email, school) {
-    //grabs other elements and will cascade down, IE - will get all properties and add more in this case github
+    //grabs other elements and will cascade down, IE - will get all properties and add more in this case Office Number
     super(name, id, email);
     this.school = school;
   }
-  // the only difference in the talest js is that its asking for a github which we put in the super
+  // the only difference in the talest js is that its asking for a Office Number which we put in the super
   // Create functions to call these properties when needed using
   // getSchool(), getRole()
   getSchool() {

@@ -12,13 +12,21 @@ class Employee {
     this.id = id;
     this.email = email;
   }
-  // Create functions to call these properties when needed using getName(),getId(),getEmail(), getRole()
+  // Create functions to call these properties when needed using
+  // getName(), getId(), getEmail(), getRole()
   getName() {
     return this.name;
   }
   getId() {
-    retu;
+    return this.id;
+  }
+  getEmail() {
+    return this.email;
+  }
+  getRole() {
+    return "Employee";
   }
 }
 
 // export the module to be use on other pages
+module.exports = Employee;
