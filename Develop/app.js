@@ -19,12 +19,13 @@ const util = require("util");
 let teamArray = [];
 
 function addTeamMember() {
-  return inquirer
+  inquirer
     .prompt([
       {
         type: "list",
         message: "What is your role?",
         choices: ["Engineer", "Intern", "Manager"],
+        name: "role",
       },
     ])
     .then(function (reply) {
@@ -154,8 +155,13 @@ function newTeamMember() {
       }
     });
 }
-// pushes the data to HTML using string literals
-function pushToHTML() {}
+// pushes the data to HTML
+function pushToHTML() {
+  const createHtml = render(teamArray);
+  writeFileAsync(outputPath, createHtml);
+}
+
+addTeamMember();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
